@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2" fx:controller="com.example.moviequotesapp.MovieQuotesController">
+    <top>
+        <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <TextField fx:id="movieTitleField" promptText="Enter movie title"/>
+            <Button fx:id="getMovieButton" text="Get Movie" onAction="#handleGetMovie"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <ImageView fx:id="moviePosterView" fitHeight="300.0" fitWidth="200.0"/>
+            <Label fx:id="movieDescriptionLabel" wrapText="true"/>
+            <Button fx:id="getQuoteButton" text="Get Quote" onAction="#handleGetQuote"/>
+            <Label fx:id="quoteLabel" wrapText="true"/>
+        </VBox>
+    </center>
+</BorderPane>
